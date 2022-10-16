@@ -40,9 +40,6 @@ export interface CompanionFeedbackInfo {
  */
 export interface CompanionFeedbackBooleanEvent extends CompanionFeedbackInfo {
 	// readonly type: 'boolean'
-
-	/** @deprecated */
-	readonly _rawBank: any
 }
 
 /**
@@ -56,14 +53,6 @@ export interface CompanionFeedbackAdvancedEvent extends CompanionFeedbackInfo {
 		readonly width: number
 		readonly height: number
 	}
-
-	/** @deprecated */
-	readonly _page: number
-	/** @deprecated */
-	readonly _bank: number
-
-	/** @deprecated */
-	readonly _rawBank: any
 }
 
 /**

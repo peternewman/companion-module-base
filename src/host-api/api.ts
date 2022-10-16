@@ -144,9 +144,6 @@ export interface SetVariableValuesMessage {
 
 export interface ExecuteActionMessage {
 	action: ActionInstance
-
-	/** @deprecated */
-	deviceId: string | undefined
 }
 
 export interface UpdateFeedbackValuesMessage {
@@ -175,14 +172,6 @@ export interface FeedbackInstance extends FeedbackInstanceBase {
 		width: number
 		height: number
 	}
-
-	/** @deprecated */
-	page: number
-	/** @deprecated */
-	bank: number
-
-	/** @deprecated */
-	rawBank: any
 }
 
 export interface UpdateFeedbackInstancesMessage {
@@ -200,11 +189,6 @@ export interface ActionInstanceBase {
 }
 export interface ActionInstance extends ActionInstanceBase {
 	controlId: string
-
-	/** @deprecated */
-	page: number
-	/** @deprecated */
-	bank: number
 }
 
 export interface UpdateActionInstancesMessage {

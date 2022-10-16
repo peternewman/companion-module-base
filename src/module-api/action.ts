@@ -75,13 +75,4 @@ export interface CompanionActionInfo {
 /**
  * Extended information for execution of an action
  */
-export interface CompanionActionEvent extends CompanionActionInfo {
-	// Future: the contents of this should be re-evaluated in v1
-
-	/** @deprecated */
-	readonly _deviceId: string | undefined
-	/** @deprecated */
-	readonly _page: number
-	/** @deprecated */
-	readonly _bank: number
-}
+export interface CompanionActionEvent extends CompanionActionInfo {}

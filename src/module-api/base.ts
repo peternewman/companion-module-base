@@ -195,10 +195,6 @@ export abstract class InstanceBase<TConfig> implements InstanceBaseShared<TConfi
 			actionId: msg.action.actionId,
 			controlId: msg.action.controlId,
 			options: msg.action.options,
-
-			_deviceId: msg.deviceId,
-			_page: msg.action.page,
-			_bank: msg.action.bank,
 		})
 	}
 	private async _handleUpdateFeedbacks(msg: UpdateFeedbackInstancesMessage, skipUpgrades?: boolean): Promise<void> {
@@ -328,10 +324,6 @@ export abstract class InstanceBase<TConfig> implements InstanceBaseShared<TConfi
 				actionId: msg.action.actionId,
 				controlId: msg.action.controlId,
 				options: msg.action.options,
-
-				_deviceId: undefined,
-				_page: msg.action.page,
-				_bank: msg.action.bank,
 			})
 
 			return {
@@ -655,16 +647,6 @@ export abstract class InstanceBase<TConfig> implements InstanceBaseShared<TConfi
 		}
 	}
 
-	/** @deprecated */
-	_getAllActions() {
-		return Array.from(this.#actionInstances.values()).map((act) => ({
-			id: act.id,
-			actionId: act.actionId,
-			controlId: act.controlId,
-			options: act.options,
-		}))
-	}
-
 	/**
 	 * Call subscribe on all currently known placed actions.
 	 * It can be useful to trigger this upon establishing a connection, to ensure all data is loaded
@@ -710,16 +692,6 @@ export abstract class InstanceBase<TConfig> implements InstanceBaseShared<TConfi
 				})
 			}
 		}
-	}
-
-	/** @deprecated */
-	_getAllFeedbacks() {
-		return Array.from(this.#feedbackInstances.values()).map((fb) => ({
-			id: fb.id,
-			feedbackId: fb.feedbackId,
-			controlId: fb.controlId,
-			options: fb.options,
-		}))
 	}
 
 	/**
