@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/bitfocus/companion-module-base/compare/v1.4.1...v1.5.0) (2023-06-11)
+
+
+### Features
+
+* support css colors and alpha colorpicker ([1250c0a](https://github.com/bitfocus/companion-module-base/commit/1250c0ad2f26c13f951991a13d9e40a0c5189c17))
+
 ## [1.4.1](https://github.com/bitfocus/companion-module-base/compare/v1.4.0...v1.4.1) (2023-04-12)
 
 
